@@ -22,47 +22,52 @@ export default function Carteirinha() {
     <View style={styles.container}>
       <View style={styles.box}>
         <Text style={styles.h2}>Carteirinha digital</Text>
-
+        <View
+          style={{
+            width: '100%',
+            height: '1px',
+            marginVertical: '8px',
+            backgroundColor: 'rgba(0, 0, 0, .1)',
+          }}
+        />
         {mockData.map((item) => (
           <View key={item.id}>
 
-            <Text style={styles}>Nome:
-              <Text style={styles.infotext}>{item.nome}</Text>
-            </Text>
+            <Text style={styles.h2}>{item.nome}</Text>
 
-            <Text style={styles}>RM:
+            <Text style={styles.small}>RM:
               <Text style={styles.infotext}>{item.rm}</Text>
             </Text>
 
-            <Text style={styles}>Instituição:
+            <Text style={styles.small}>Instituição:
               <Text style={styles.infotext}>{item.instituicao}</Text>
             </Text>
 
-            <Text style={styles}>Curso:
+            <Text style={styles.small}>Curso:
               <Text style={styles.infotext}>{item.curso}</Text>
             </Text>
 
-            <Text style={styles}>Unidade:
+            <Text style={styles.small}>Unidade:
               <Text style={styles.infotext}>{item.unidade}</Text>
             </Text>
 
-            <Text style={styles}>Turma:
+            <Text style={styles.small}>Turma:
               <Text style={styles.infotext}>{item.turma}</Text>
             </Text>
 
-            <Text style={styles}>Série:
+            <Text style={styles.small}>Série:
               <Text style={styles.infotext}>{item.serie}</Text>
             </Text>
 
-            <Text style={styles}>Período:
+            <Text style={styles.small}>Período:
               <Text style={styles.infotext}>{item.periodo}</Text>
             </Text>
 
-            <Text style={styles}>Validade:
+            <Text style={styles.small}>Validade:
               <Text style={styles.infotext}>{item.validade}</Text>
             </Text>
 
-            <Text style={styles}>CPF:
+            <Text style={styles.small}>CPF:
               <Text style={styles.infotext}>{item.cpf}</Text>
             </Text>
           </View>
@@ -94,5 +99,10 @@ const styles = StyleSheet.create({
     fontSize: '18px',
     fontWeight: 'bold',
     color: '#fff',
+  },
+  small: {
+    color: '#fff',
+    fontSize: '80%',
+    fontWeight: '400',
   }
 });

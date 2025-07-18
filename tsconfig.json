@@ -21,5 +21,6 @@
     "**/*.js",
     ".expo/types/**/*.ts",
     "expo-env.d.ts",
+    "nativewind-env.d.ts"
   ]
 }

@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* Depois, importe esse CSS no ponto de entrada do seu app (por exemplo, em app.js, index.js, ou pages/_app.js): */
+
+ /* ...existing code...
+import './app/global.css';
+ ...existing code... */

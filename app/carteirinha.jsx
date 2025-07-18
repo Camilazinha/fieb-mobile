@@ -1,6 +1,7 @@
 // app/carteirinha.js
 import { StyleSheet, Text, View } from 'react-native';
 
+
 const mockData = [
   {
     id: 1,
@@ -72,6 +73,10 @@ export default function Carteirinha() {
             </Text>
           </View>
         ))}
+
+
+
+
 
       </View>
     </View>

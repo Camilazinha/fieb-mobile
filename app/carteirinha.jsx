@@ -4,11 +4,11 @@ import { StyleSheet, Text, View } from 'react-native';
 const mockData = [
   {
     id: 1,
-    nome: 'Camila',
+    nome: 'Ana Maria da Silva Souza',
     rm: '10844',
     instituicao: 'FIEB',
     curso: 'Redes para computadores',
-    unidade: 'ITB - Lugarzinho fofo - Unidade Fofa',
+    unidade: 'ITB - Unidade Parque Tecnológico',
     turma: 'IRD2CM',
     serie: '2ª série',
     periodo: 'Manhã',
@@ -33,48 +33,50 @@ export default function Carteirinha() {
         {mockData.map((item) => (
           <View key={item.id}>
 
-            <Text style={styles.h2}>{item.nome}</Text>
+            <Text style={[styles.h2, { marginVertical: '8px' }]}>{item.nome}</Text>
 
-            <Text style={styles.small}>RM:
+            <Text style={[styles.small, styles.textcontainer]}>RM:
               <Text style={styles.infotext}>{item.rm}</Text>
             </Text>
 
-            <Text style={styles.small}>Instituição:
-              <Text style={styles.infotext}>{item.instituicao}</Text>
-            </Text>
+            <View style={styles.gridcontainer}>
+              <Text style={[styles.small, styles.textcontainer]}>Instituição:
+                <Text style={styles.infotext}>{item.instituicao}</Text>
+              </Text>
 
-            <Text style={styles.small}>Curso:
-              <Text style={styles.infotext}>{item.curso}</Text>
-            </Text>
+              <Text style={[styles.small, styles.textcontainer]}>Curso:
+                <Text style={styles.infotext}>{item.curso}</Text>
+              </Text>
 
-            <Text style={styles.small}>Unidade:
-              <Text style={styles.infotext}>{item.unidade}</Text>
-            </Text>
+              <Text style={[styles.small, styles.textcontainer]}>Unidade:
+                <Text style={styles.infotext}>{item.unidade}</Text>
+              </Text>
 
-            <Text style={styles.small}>Turma:
-              <Text style={styles.infotext}>{item.turma}</Text>
-            </Text>
+              <Text style={[styles.small, styles.textcontainer]}>Turma:
+                <Text style={styles.infotext}>{item.turma}</Text>
+              </Text>
 
-            <Text style={styles.small}>Série:
-              <Text style={styles.infotext}>{item.serie}</Text>
-            </Text>
+              <Text style={[styles.small, styles.textcontainer]}>Série:
+                <Text style={styles.infotext}>{item.serie}</Text>
+              </Text>
 
-            <Text style={styles.small}>Período:
-              <Text style={styles.infotext}>{item.periodo}</Text>
-            </Text>
+              <Text style={[styles.small, styles.textcontainer]}>Período:
+                <Text style={styles.infotext}>{item.periodo}</Text>
+              </Text>
 
-            <Text style={styles.small}>Validade:
-              <Text style={styles.infotext}>{item.validade}</Text>
-            </Text>
+              <Text style={[styles.small, styles.textcontainer]}>Validade:
+                <Text style={styles.infotext}>{item.validade}</Text>
+              </Text>
 
-            <Text style={styles.small}>CPF:
-              <Text style={styles.infotext}>{item.cpf}</Text>
-            </Text>
+              <Text style={[styles.small, styles.textcontainer]}>CPF:
+                <Text style={styles.infotext}>{item.cpf}</Text>
+              </Text>
+            </View>
           </View>
         ))}
 
       </View>
-    </View>
+    </View >
   );
 }
 
@@ -104,5 +106,14 @@ const styles = StyleSheet.create({
     color: '#fff',
     fontSize: '80%',
     fontWeight: '400',
+  },
+  textcontainer: {
+    display: 'grid',
+  },
+  gridcontainer: {
+    display: 'grid',
+    gridTemplateColumns: 'repeat(2, 1fr)',
+    gap: 8,
+    aligncontent: 'center',
   }
 });
